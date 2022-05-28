@@ -28,7 +28,7 @@ echo "+ $info"
 
 # (2) Github Repository:  origin/main
 #git branch -M main
-git remote add origin https://github.com/ju1-eu/N-Kfz-Elektrik-Herrmann.git
+#git remote add origin https://github.com/ju1-eu/N-Kfz-Elektrik-Herrmann.git
 #git push -u origin main
 
 # (3) backup Repository:  backupUSB/main

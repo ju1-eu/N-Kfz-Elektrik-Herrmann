@@ -70,8 +70,8 @@ T1B="\newcommand{\quelle}{\name}
 		\vspace{0.8em}
 		
 		%\datum	
-		\qrcode[hyperlink,level=Q,version=2,height=1cm]{\website}
-		%\qrcode[hyperlink,level=Q,version=2,height=1cm]{\github}
+		%\qrcode[hyperlink,level=Q,version=2,height=1cm]{\website}
+		\qrcode[hyperlink,level=Q,version=2,height=1cm]{\github}
 	\end{center}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

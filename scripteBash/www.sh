@@ -173,35 +173,6 @@ echo "$T5"     >> ./$HTML/$X_PDFs
 echo "+ $HTML/alle-PDFs.html wurde erstellt"
 
 
-#----------------------
-# File neu anlegen
-# alle Muster-PDFs
-MUSTER_PDFs="alle-Muster-PDFs.html"
-echo "<!--$COPYRIGHT-->"  >  ./$HTML/$MUSTER_PDFs
-echo "$T1"                >> ./$HTML/$MUSTER_PDFs
-echo "$T3"                >> ./$HTML/$MUSTER_PDFs
-echo "$T4"                >> ./$HTML/$MUSTER_PDFs
-echo "	<p><a href=\"../$FILE\">Start</a></p>
-	<h1>$THEMA</h1>
-	<h2>$MUSTER_PDFs</h2>"    >> ./$HTML/$MUSTER_PDFs
-
-cd $TABELLEN/$MUSTER
-
-EXT="pdf"
-exist=$(find . -type f -iname "*.$EXT" | wc -l)
-if [ $exist -ge 1 ]; then
-	for i in *.$EXT; do
-		echo "		<li><a href=\"../$TABELLEN/$MUSTER/$i\">$i</a></li>"  >> ../../$HTML/$MUSTER_PDFs
-	done
-fi
-
-cd ../..
-
-echo "	</ul>" >> ./$HTML/$MUSTER_PDFs
-echo "$T5"     >> ./$HTML/$MUSTER_PDFs
-echo "+ $HTML/alle-Muster-PDFs.html wurde erstellt"
-
-
 # -------------------------
 # index.html
 cd $HTML
