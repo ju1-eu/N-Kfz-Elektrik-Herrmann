@@ -1,25 +1,5 @@
-#!/bin/bash -e
-# ju 28-5-22
-#################################################################
-# Artikel aus den Ordnern erstellen
-#   content/tex/
-#   wird gespeichert in Artikel/
-#################################################################
-
-# Variable anpassen
-TEX="tex"
-CONTENT="content"
-ARTIKEL="Artikel"
-INFO="Artikel aus den Ordnern erstellen
-	* '$CONTENT/$TEX/'
-	*  wird gespeichert in 'Artikel/'"
-TIMESTAMP=$(date +"%d-%h-%y")
-COPYRIGHT="ju $TIMESTAMP"
-
-#################################################################
-echo "+ $INFO"
-
-T1A="\documentclass[a4paper,12pt,fleqn,parskip=half]{scrartcl}
+% ju 06-Jun-22
+\documentclass[a4paper,12pt,fleqn,parskip=half]{scrartcl}
 \include{content/praeambel-artikel}   
 
 \usepackage[left=2cm,right=2cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}
@@ -41,9 +21,9 @@ T1A="\documentclass[a4paper,12pt,fleqn,parskip=half]{scrartcl}
 \bibliography{content/literatur-sport}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\name}{Jan Unger}% anpassen!!!!!"
-
-T1B="\newcommand{\quelle}{\name}
+\newcommand{\name}{Jan Unger}% anpassen!!!!!
+\newcommand{\thema}{02-Grundlagen-Elektrotechnik2}
+\newcommand{\quelle}{\name}
 \newcommand{\website}{https://bw-ju.de/}
 \newcommand{\github}{https://github.com/ju1-eu}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -81,33 +61,13 @@ T1B="\newcommand{\quelle}{\name}
 		\item Begriff 
 	\end{itemize}
 
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
-T2="
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 	% anpassen
-	%\input{content/tex/neu}"
-T3="
+	%\input{content/tex/neu}
+	\input{content/tex/02-Grundlagen-Elektrotechnik2.tex}
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Bibliographie
     \printbibliography[category=cited]
-\end{document}"
-
-# tex/
-cd $CONTENT/$TEX
-EXT="tex" 
-EXIST=$(find . -type f -iname "*.$EXT" | wc -l)
-if [ $EXIST -ge 1 ]; then
-	for i in *.$EXT; do
-		# dateiname ohne Endung
-		TEXNAME=`basename "$i" .$EXT`
-		echo "% $COPYRIGHT"       			   > ../../$ARTIKEL/E-Keywords-$TEXNAME.tex # file anlegen
-		echo "$T1A"               			  >> ../../$ARTIKEL/E-Keywords-$TEXNAME.tex
-		echo "\newcommand{\thema}{$TEXNAME}"  >> ../../$ARTIKEL/E-Keywords-$TEXNAME.tex
-		echo "$T1B"               			  >> ../../$ARTIKEL/E-Keywords-$TEXNAME.tex
-		echo "$T2"               			  >> ../../$ARTIKEL/E-Keywords-$TEXNAME.tex
-		echo "	\input{$CONTENT/$TEX/$i}"     >> ../../$ARTIKEL/E-Keywords-$TEXNAME.tex
-		echo "$T3"               			  >> ../../$ARTIKEL/E-Keywords-$TEXNAME.tex
-	done
-fi
-cd ../..
-
-echo "...fertig."
+\end{document}
