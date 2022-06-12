@@ -1,4 +1,4 @@
-% ju 13-5-22 Latex-Vorlage.tex
+% ju 12-5-22 01-N-Keywords-Thema.tex
 \documentclass[a4paper,12pt,fleqn,parskip=half]{scrartcl}
 \include{content/praeambel-artikel}  
 
@@ -22,7 +22,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\name}{Jan Unger}% anpassen!!!!!
-\newcommand{\thema}{\LaTeX - Vorlage}% anpassen!!!!!
+\newcommand{\thema}{Spickzettel-Latex}% anpassen!!!!!
 \newcommand{\quelle}{\name}
 \newcommand{\website}{https://bw-ju.de/}
 \newcommand{\github}{https://github.com/ju1-eu}
@@ -43,30 +43,26 @@
 	%\newpage
 	%\setcounter{page}{1}
 
-	\subsection*{\LaTeX}%\label{sec:Deadline}\index{Deadline}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{center}
+		\textbf{\Large \thema}\\%14pt
+		\vspace{0.8em}
+		%\datum	
+		\qrcode[hyperlink,level=Q,version=2,height=1cm]{\website}
+		%\qrcode[hyperlink,level=Q,version=2,height=1cm]{\github}
+	\end{center}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\subsection*{Keywords}%\label{sec:Deadline}\index{Deadline}
+
 	% Checkliste
 	\begin{itemize}[label=\checkmark] %\itemsep -2pt
-		\item Check
+		\item Begriff 
 	\end{itemize}
 
-	% Checkliste
-	\begin{itemize} 
-		\item [$\square$] Check
-	\end{itemize}
-
-	% Liste
-	\begin{itemize} 
-		\item Punkt
-	\end{itemize}
-	
-	% Liste numeriert
-	\begin{enumerate} 
-		\item Liste numeriert
-		\item Punkt
-	\end{enumerate}
-
+	\input{content/tex/Spickzettel-Latex.tex}
 	%\input{content/tex/.tex}
 
-    % Bibliographie
+	% Bibliographie
     \printbibliography[category=cited]
 \end{document}

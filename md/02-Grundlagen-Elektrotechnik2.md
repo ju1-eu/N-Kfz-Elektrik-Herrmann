@@ -9,86 +9,64 @@ bibliography: literatur-kfz.bib
 csl: zitierstil-number.csl
 ---
 <!-----------------------------+
-ju 5-6-22
+ju 12-6-22
 Keywords - Grundlagen - Elektrotechnik II
 +------------------------------>
 
-#  Pulsweitenmodulation
+# Pulsweitenmodulation
 
-1. **PWM-Signal:** Rechtecksignal
+1. **PWM-Signal:** Rechtecksignal (vgl. Kennlinie)
 
 1. **Messen:** Oszilloskop
 
-1. **Ansteuerung:** $0 - 100~\%$, Impuls - Pause - Verhältnisänderung / Frequenzänderung (keine Spannungsänderung!)
+1. **Ansteuerung:** $0 - 100~\%$, Impuls-Pause-Verhältnisänderung (nur Pulsweite ändert sich), aber Periodendauer / Frequenz bleibt konstant (keine Spannungsänderung!)
 
 1. **Anwendung**
-    - Motorgeschwindigkeit 
-    - Glühlampenhelligkeit 
+    - Elektromotor (Drehzahl)
+    - Glühlampen (Helligkeit, dimmen)
     - Beleuchtung, Beispiel: Einfaden-Glühlampe (Standlicht + Bremslicht)
 
-Die **Pulsweitenmodulation** (PWM) ist eine digitale Modulationsart, bei der eine technische Größe zwischen zwei Werten wechselt. Dabei wird bei konstanter Frequenz ein Rechtecksignal moduliert, das in Weite, Breite bzw. Länge variiert. Das Verhältnis zwischen Impuls und Pause wird als **Tastgrad** bezeichnet. **Anwendung** in der Steuer- und Regelungstechnik.
+Die **Pulsweitenmodulation** (PWM) ist eine digitale Modulationsart, bei der eine technische Größe zwischen zwei Werten (Spannungspegel $0~V$ und VCC) wechselt. Dabei wird bei konstanter Frequenz ein Rechtecksignal moduliert, das in Pulsweite (*oder* Breite bzw. Länge) variiert. Das Verhältnis zwischen Impuls und Pause (Ein- und Ausschaltzeit) wird als **Tastgrad / Tastverhältnis** bezeichnet. **Anwendung** in der Steuer- und Regelungstechnik.
+
 
 # Halbleiter
 
-**Material:** reines Silizium, wenn es wärmer wird, wird es leidend.
+**Halbleiter** der Widerstand ist temperaturabhängig.
 
-**Dotieren**, um die Leitfähigkeit zu verbessern.
+**Material** Beispiel: reines Silizium, wenn es erwärmt wird, wird es leitend.
 
-1. **P-Leiter** Silizium wird verunreinigt, mit Bohr, weniger Elektronen
-2. **N-Leiter** Silizium wird verunreinigt, mit Phosphor, Elektronenüberschuss
+**Dotieren** Leitfähigkeit verbessern.
+
+## P-Leiter und N-Leiter
+
+1. **P-Leiter** *Elektronenmangel* (Leitermaterial Silizium wird verunreinigt mit Bohr)
+
+2. **N-Leiter** *Elektronenüberschuss* (Leitermaterial Silizium wird verunreinigt mit Phosphor)
 
 $\to$ Spannung anlegen, dann kommt es zum Elektronenfluss, weil die Elektronen versuchen sich auszugleichen.
 
-**Anwendung:** Diesel-Abgastemperatursensoren (PTC-Widerstände)
+## Sensoren und Aktoren
 
-# Fragen zum Schaltplan Audi A3 2009
+**Sensoren** erfassen Messgrößen und wandeln diese in elektrische Signale um. (Sinne des Autos) 
 
+**Aktoren** Ausführen 
 
-**1. Beschreiben Sie die Spannungsversorgung für die Pumpe für Kühler der Abgasrückführung.**
+**NTC und PTC**
 
-1. Stromverteiler (87) 
-1. über Sicherung (24) 
-1. Steckverbindung ($T_{40/11}$)
-1. Plusverbindung $B_{321}$
-1. Pumpe für Kühler der Abgasrückführung $V_{400}$ (Pin 2) 
-1. Steckverbindung ($T_{14/9}$)
-1. Masseverbindung (394)
-1. Massepunkt (655) am Scheinwerfer links
+1. **Heißleiter** $\to$ NTC-Widerstände 
+    - *negativer Temperatur-Koeffizient* $\to$ fallender Widerstand bei steigender Temperatur $\uparrow \downarrow$ 
+    - vgl. Kennlinie (x = Temperatur, y = Widerstand) 
+    - **Anwendung:** Temperatursensoren (Kühlmittel-, Kraftstoff-, Luft-, Motortemperaturfühler)
+    - Schaltsymbol
+    - typische Werte: Kalt: $2 - 4~k\Omega$ und Warm: $200 - 400~\Omega$
+    - *Leitfähigkeit* steigt mit zunehmender Temperatur 
+    - Widerstand und Spannungsfall am NTC wierden kleiner 
 
-
-**2. Welche Fehler können auftreten und welche Auswirkungen haben diese?**
-
-**Welches Signal erwarten wir?** PWM-Signal
-
-1. Bauteil defekt
-1. Sicherung defekt 
-1. Leitungsunterbrechung (Signalleitung, Plusleitung, Masseleitung)
-1. Übergangswiderstand (Spannungsfall im Stecker oder Leitungen)
-1. Masseschluss oder Plusschluss
-
-**Mögliche Fehler**
-
-1. MIL-Lampe an $\to$ Abgas relevanter Fehler (Steuerhinterziehung)
-1. AGR klemmt fest, wenn offen $\to$ Leistungsverlust im warmen Zustand
-
-
-**3. Fehler Abgastemperaturgeber 1, 3, 4 sind im Fehlerspeicher abgelegt. Nennen Sie mögliche Fehlerursachen.**
-
-1. Bauteil defekt (Temperatursensoren) 
-1. plusseitig
-
-**4. Motordrehzahlgeber hat kein Signal. Welche möglichen Ursachen liegen vor?**
-
-**Was erwarten wir?** Hallgeber, Versorgungsspannung (5 V)
-
-1. Masseverbindung 
-1. Bauteil defekt 
-1. Plusverbindung (5 V)
-
-**5. Ihnen liegt ein Fehler zur Kraftstoffvorratsanzeige vor. Nennen Sie mögliche Fehler.**
-
-1. Geber defekt
-1. Gebermasse 
-1. Übergangswiderstand 
-1. Leitungsunterbrechung von (Pin 3 + 4) zum Kombiinstrument 
-1. Widerstand defekt
+1. **Kaltleiter** $\to$ PTC-Widerstände 
+    - *positiver Temperatur-Koeffizient* $\to$ zunehmender Widerstand bei steigender Temperatur $\uparrow \uparrow$ 
+    - vgl. Kennlinie (x = Temperatur, y = Widerstand) 
+    - **Anwendung:** Hochtemperaturbereich (Diesel-Abgastemperatursensoren), Glühkerzen, Heizungen von Lambdasonden
+    - Schaltsymbol
+    - *Leitfähigkeit* verringert sich mit zunehmender Temperatur
+    - Widerstand und Spannungsfall am PTC werden größer 
+    - "Je höher der Widerstand, desto geringer der Stromfluss."

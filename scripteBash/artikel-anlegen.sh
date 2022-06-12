@@ -1,5 +1,5 @@
 #!/bin/bash -e
-# ju 28-5-22
+# ju 7-6-22
 #################################################################
 # Artikel aus den Ordnern erstellen
 #   content/tex/
@@ -41,7 +41,7 @@ T1A="\documentclass[a4paper,12pt,fleqn,parskip=half]{scrartcl}
 \bibliography{content/literatur-sport}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\name}{Jan Unger}% anpassen!!!!!"
+\newcommand{\name}{Jan Unger}"
 
 T1B="\newcommand{\quelle}{\name}
 \newcommand{\website}{https://bw-ju.de/}
@@ -50,7 +50,6 @@ T1B="\newcommand{\quelle}{\name}
 
 \ihead{\textbf{Quelle:} \quelle}%{Kopfzeile innen}
 \ohead{\textbf{Datum:} \today}  %{Kopfzeile außen}
-
 \ifoot{\textbf{Thema:} \thema}  %{Fußzeile  innen}
 \ofoot{Seite {\thepage} von {\pageref{LastPage}}}%{Fußzeile  außen}
 
@@ -59,28 +58,24 @@ T1B="\newcommand{\quelle}{\name}
 \date{\today}
 
 \begin{document}
-	%\thispagestyle{empty}
-	%\maketitle
-	%\newpage
-	%\setcounter{page}{1}
-
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\begin{center}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{abstract}
+		\center
 		\textbf{\Large \thema}%14pt
-		\vspace{0.8em}
 		
+		\vspace{1.5em}
 		%\datum	
 		%\qrcode[hyperlink,level=Q,version=2,height=1cm]{\website}
 		\qrcode[hyperlink,level=Q,version=2,height=1cm]{\github}
-	\end{center}
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-	\subsection*{Keywords}%\label{sec:Deadline}\index{Deadline}
-	% Checkliste
-	\begin{itemize}[label=\checkmark] %\itemsep -2pt
-		\item Begriff 
-	\end{itemize}
-
+		
+		\vspace{1.5em} 
+		\raggedright
+		\textbf{\large Keywords}
+		% Checkliste
+		\begin{itemize}[label=\checkmark]
+			\item Begriff
+		\end{itemize}
+	\end{abstract}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
 T2="
 	% anpassen
@@ -99,13 +94,13 @@ if [ $EXIST -ge 1 ]; then
 	for i in *.$EXT; do
 		# dateiname ohne Endung
 		TEXNAME=`basename "$i" .$EXT`
-		echo "% $COPYRIGHT"       			   > ../../$ARTIKEL/E-Keywords-$TEXNAME.tex # file anlegen
-		echo "$T1A"               			  >> ../../$ARTIKEL/E-Keywords-$TEXNAME.tex
-		echo "\newcommand{\thema}{$TEXNAME}"  >> ../../$ARTIKEL/E-Keywords-$TEXNAME.tex
-		echo "$T1B"               			  >> ../../$ARTIKEL/E-Keywords-$TEXNAME.tex
-		echo "$T2"               			  >> ../../$ARTIKEL/E-Keywords-$TEXNAME.tex
-		echo "	\input{$CONTENT/$TEX/$i}"     >> ../../$ARTIKEL/E-Keywords-$TEXNAME.tex
-		echo "$T3"               			  >> ../../$ARTIKEL/E-Keywords-$TEXNAME.tex
+		echo "% $COPYRIGHT"       			    > ../../$ARTIKEL/N-Keywords-$TEXNAME.tex # file anlegen
+		echo "$T1A"               			   >> ../../$ARTIKEL/N-Keywords-$TEXNAME.tex
+		echo "\newcommand{\thema}{$TEXNAME}"   >> ../../$ARTIKEL/N-Keywords-$TEXNAME.tex
+		echo "$T1B"               			   >> ../../$ARTIKEL/N-Keywords-$TEXNAME.tex
+		echo "$T2"               			   >> ../../$ARTIKEL/N-Keywords-$TEXNAME.tex
+		echo "	\input{$CONTENT/$TEX/$i}"      >> ../../$ARTIKEL/N-Keywords-$TEXNAME.tex
+		echo "$T3"               			   >> ../../$ARTIKEL/N-Keywords-$TEXNAME.tex
 	done
 fi
 cd ../..

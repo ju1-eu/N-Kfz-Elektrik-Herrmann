@@ -1,9 +1,9 @@
-% ju 13-5-22 Latex-Vorlage.tex
+% ju 12-Jun-22
 \documentclass[a4paper,12pt,fleqn,parskip=half]{scrartcl}
-\include{content/praeambel-artikel}  
+\include{content/praeambel-artikel}   
 
-%\usepackage[left=2cm,right=2cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}
-\usepackage[left=4cm,right=2cm,top=1cm, bottom=1cm,includeheadfoot]{geometry}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}
+%\usepackage[left=4cm,right=2cm,top=1cm, bottom=1cm,includeheadfoot]{geometry}
 %\usepackage[left=6cm,right=1cm,top=1cm, bottom=1cm,includeheadfoot]{geometry}
 %\usepackage[landscape=true,left=2cm,right=2cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}%quer
 
@@ -21,8 +21,8 @@
 \bibliography{content/literatur-sport}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\name}{Jan Unger}% anpassen!!!!!
-\newcommand{\thema}{\LaTeX - Vorlage}% anpassen!!!!!
+\newcommand{\name}{Jan Unger}
+\newcommand{\thema}{Sensoren}
 \newcommand{\quelle}{\name}
 \newcommand{\website}{https://bw-ju.de/}
 \newcommand{\github}{https://github.com/ju1-eu}
@@ -38,35 +38,31 @@
 \date{\today}
 
 \begin{document}
-	%\thispagestyle{empty}
-	%\maketitle
-	%\newpage
-	%\setcounter{page}{1}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{abstract}
+		\center
+		\textbf{\Large \thema}%14pt
+		
+		\vspace{1.5em}
+		%\datum	
+		%\qrcode[hyperlink,level=Q,version=2,height=1cm]{\website}
+		\qrcode[hyperlink,level=Q,version=2,height=1cm]{\github}
+		
+		\vspace{1.5em} 
+		\raggedright
+		\textbf{\large Keywords}
+		% Checkliste
+		\begin{itemize}[label=\checkmark]
+			\item Begriff
+		\end{itemize}
+	\end{abstract}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	\subsection*{\LaTeX}%\label{sec:Deadline}\index{Deadline}
-	% Checkliste
-	\begin{itemize}[label=\checkmark] %\itemsep -2pt
-		\item Check
-	\end{itemize}
+	% anpassen
+	%\input{content/tex/neu}
+	\input{content/tex/Sensoren.tex}
 
-	% Checkliste
-	\begin{itemize} 
-		\item [$\square$] Check
-	\end{itemize}
-
-	% Liste
-	\begin{itemize} 
-		\item Punkt
-	\end{itemize}
-	
-	% Liste numeriert
-	\begin{enumerate} 
-		\item Liste numeriert
-		\item Punkt
-	\end{enumerate}
-
-	%\input{content/tex/.tex}
-
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Bibliographie
     \printbibliography[category=cited]
 \end{document}
