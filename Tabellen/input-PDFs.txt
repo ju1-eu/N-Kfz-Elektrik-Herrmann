@@ -1,4 +1,4 @@
-% ju 12-Jun-2022 input-PDFs.txt 
+% ju 06-Jul-2022 input-PDFs.txt 
 
 \chapter{PDF}% book, print anpassen
 

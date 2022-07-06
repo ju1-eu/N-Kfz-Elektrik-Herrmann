@@ -1,4 +1,4 @@
-%ju 12-Jun-22 02-Grundlagen-Elektrotechnik2.tex
+%ju 06-Jul-22 02-Grundlagen-Elektrotechnik2.tex
 \section{Pulsweitenmodulation}\label{pulsweitenmodulation}
 
 \begin{enumerate}
@@ -33,39 +33,47 @@ bezeichnet. \textbf{Anwendung} in der Steuer- und Regelungstechnik.
 
 \section{Halbleiter}\label{halbleiter}
 
-\textbf{Halbleiter} der Widerstand ist temperaturabhängig.
+\textbf{Halbleiter} ist ein kristalliner Stoff, der sich bei tiefen
+Temperaturen wie ein Isolator verhält und bei höheren Temperaturen nimmt
+die elektrische Leitfähigkeit zu. Der Widerstand ist temperaturabhängig.
 
-\textbf{Material} Beispiel: reines Silizium, wenn es erwärmt wird, wird
-es leitend.
+\textbf{Material} Beispiel: reines Silizium / Germanium
 
-\textbf{Dotieren} Leitfähigkeit verbessern.
+\textbf{Anwendung} Beispiel: Diode, Transistor
+
+\textbf{Dotieren} reines Silizium / Germanium wird verunreinigt, um die
+elektrische Leitfähigkeit zu verbessern.
 
 \subsection{P-Leiter und N-Leiter}\label{p-leiter-und-n-leiter}
 
 \begin{enumerate}
 \item
-  \textbf{P-Leiter} \emph{Elektronenmangel} (Leitermaterial Silizium
-  wird verunreinigt mit Bohr)
+  \textbf{P-Leiter} entsteht, wenn das Leitermaterial Silizium
+  verunreinigt wird mit Bohr und bei \emph{Elektronenmangel} enthält es
+  freie positive Ladungen
 \item
-  \textbf{N-Leiter} \emph{Elektronenüberschuss} (Leitermaterial Silizium
-  wird verunreinigt mit Phosphor)
+  \textbf{N-Leiter} entsteht, wenn das Leitermaterial Silizium
+  verunreinigt wird mit Phosphor und bei \emph{Elektronenüberschuss}
+  enthält es freie negative Ladungen.
 \end{enumerate}
 
-$\to$ Spannung anlegen, dann kommt es zum Elektronenfluss, weil die
-Elektronen versuchen sich auszugleichen.
+$\to$ Legt man an den Halbleiterkristall eine elektrische Spannung an,
+dann kommt es zum Elektronenfluss, weil die Elektronen versuchen sich
+auszugleichen.
 
 \subsection{Sensoren und Aktoren}\label{sensoren-und-aktoren}
 
-\textbf{Sensoren} erfassen Messgrößen und wandeln diese in elektrische
-Signale um. (Sinne des Autos)
+\textbf{Sensoren} erfassen physikalische Effekte (Druck, Temperatur) und
+wandeln diese in elektrische Signale um. (Sinne des Autos)
 
-\textbf{Aktoren} Ausführen
+\textbf{Aktoren} wandeln elektrische Spannungssignale in physikalische
+Effekte um (Stellglieder, Ausführen).
 
 \textbf{NTC und PTC}
 
 \begin{enumerate}
 \item
-  \textbf{Heißleiter} $\to$ NTC-Widerstände
+  \textbf{Heißleiter} $\to$ NTC-Widerstände bis $250^\circ\text{C}$
 
   \begin{itemize}
   \item
@@ -84,10 +92,11 @@ Signale um. (Sinne des Autos)
   \item
     \emph{Leitfähigkeit} steigt mit zunehmender Temperatur
   \item
-    Widerstand und Spannungsfall am NTC wierden kleiner
+    Widerstand und Spannungsfall am NTC werden kleiner
   \end{itemize}
 \item
-  \textbf{Kaltleiter} $\to$ PTC-Widerstände
+  \textbf{Kaltleiter} $\to$ PTC-Widerstände bis
+  $950 - 1000^\circ\text{C}$
 
   \begin{itemize}
   \item

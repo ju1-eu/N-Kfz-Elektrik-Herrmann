@@ -9,7 +9,7 @@ bibliography: literatur-kfz.bib
 csl: zitierstil-number.csl
 ---
 <!-----------------------------+
-ju 12-6-22
+ju 6-7-22
 Keywords - Grundlagen - Elektrotechnik II
 +------------------------------>
 
@@ -31,38 +31,40 @@ Die **Pulsweitenmodulation** (PWM) ist eine digitale Modulationsart, bei der ein
 
 # Halbleiter
 
-**Halbleiter** der Widerstand ist temperaturabhängig.
+**Halbleiter** ist ein kristalliner Stoff, der sich bei tiefen Temperaturen wie ein Isolator verhält und bei höheren Temperaturen nimmt die elektrische Leitfähigkeit zu. Der Widerstand ist temperaturabhängig.
 
-**Material** Beispiel: reines Silizium, wenn es erwärmt wird, wird es leitend.
+**Material** Beispiel: reines Silizium / Germanium
 
-**Dotieren** Leitfähigkeit verbessern.
+**Anwendung** Beispiel: Diode, Transistor
+
+**Dotieren** reines Silizium / Germanium wird verunreinigt, um die elektrische Leitfähigkeit zu verbessern.
 
 ## P-Leiter und N-Leiter
 
-1. **P-Leiter** *Elektronenmangel* (Leitermaterial Silizium wird verunreinigt mit Bohr)
+1. **P-Leiter** entsteht, wenn das Leitermaterial Silizium verunreinigt wird mit Bohr und bei *Elektronenmangel* enthält es freie positive Ladungen
 
-2. **N-Leiter** *Elektronenüberschuss* (Leitermaterial Silizium wird verunreinigt mit Phosphor)
+2. **N-Leiter** entsteht, wenn das Leitermaterial Silizium verunreinigt wird mit Phosphor und bei *Elektronenüberschuss* enthält es freie negative Ladungen.
 
-$\to$ Spannung anlegen, dann kommt es zum Elektronenfluss, weil die Elektronen versuchen sich auszugleichen.
+$\to$ Legt man an den Halbleiterkristall eine elektrische Spannung an, dann kommt es zum Elektronenfluss, weil die Elektronen versuchen sich auszugleichen.
 
 ## Sensoren und Aktoren
 
-**Sensoren** erfassen Messgrößen und wandeln diese in elektrische Signale um. (Sinne des Autos) 
+**Sensoren** erfassen physikalische Effekte (Druck, Temperatur) und wandeln diese in elektrische Signale um. (Sinne des Autos) 
 
-**Aktoren** Ausführen 
+**Aktoren** wandeln elektrische Spannungssignale in physikalische Effekte um (Stellglieder, Ausführen). 
 
 **NTC und PTC**
 
-1. **Heißleiter** $\to$ NTC-Widerstände 
+1. **Heißleiter** $\to$ NTC-Widerstände bis $250^\circ\text{C}$
     - *negativer Temperatur-Koeffizient* $\to$ fallender Widerstand bei steigender Temperatur $\uparrow \downarrow$ 
     - vgl. Kennlinie (x = Temperatur, y = Widerstand) 
     - **Anwendung:** Temperatursensoren (Kühlmittel-, Kraftstoff-, Luft-, Motortemperaturfühler)
     - Schaltsymbol
     - typische Werte: Kalt: $2 - 4~k\Omega$ und Warm: $200 - 400~\Omega$
     - *Leitfähigkeit* steigt mit zunehmender Temperatur 
-    - Widerstand und Spannungsfall am NTC wierden kleiner 
+    - Widerstand und Spannungsfall am NTC werden kleiner 
 
-1. **Kaltleiter** $\to$ PTC-Widerstände 
+1. **Kaltleiter** $\to$ PTC-Widerstände bis $950 - 1000^\circ\text{C}$
     - *positiver Temperatur-Koeffizient* $\to$ zunehmender Widerstand bei steigender Temperatur $\uparrow \uparrow$ 
     - vgl. Kennlinie (x = Temperatur, y = Widerstand) 
     - **Anwendung:** Hochtemperaturbereich (Diesel-Abgastemperatursensoren), Glühkerzen, Heizungen von Lambdasonden

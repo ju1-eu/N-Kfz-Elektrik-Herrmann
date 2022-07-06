@@ -12,7 +12,7 @@ csl: zitierstil-number.csl
 Dozent: 
 # 
 ## 
-ju 12-6-22 Prüfung - Automatikgetriebe
+ju 6-7-22 Prüfung - Automatikgetriebe
 +------------------------------>
 
 **1) Dialogannahme -- Fragen an den Kunden, die das Problem eingrenzen.**
@@ -30,7 +30,7 @@ ju 12-6-22 Prüfung - Automatikgetriebe
 
 **3) Welche Sicherung prüfen Sie zuerst?**
 
-$F_1$ 22, $F_1$ 16 (vgl. Schaltplan)
+vgl. Schaltplan
 
 **4) Funktionsprüfung Magnetventil**
 
