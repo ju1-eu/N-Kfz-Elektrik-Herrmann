@@ -9,7 +9,7 @@ bibliography: literatur-kfz.bib
 csl: zitierstil-number.csl
 ---
 <!-----------------------------+
-ju 13-5-22
+ju 17-7-22
 Keywords - Grundlagen - Elektrotechnik
 +------------------------------>
 
@@ -31,9 +31,9 @@ Multimeter ist ein Multifunktionsgerät, das Spannungsmesser, Strommesser, Wider
 
 **Widerstandsmessung** Bauteil/Leitung vollständig aus dem Stromkreis trennen. Messgerät legt Prüfstrom an, um den Widerstand zu messen.
 
-**Spannungsmessung** Potenzialdifferenz bestimmen, hochohmig
+**Spannungsmessung** Potenzialdifferenz bestimmen, hochohmig, Parallel zum Meßobjekt
 
-**Strommesser** niederohmig
+**Strommesser** niederohmig, in Reihe zum Meßobjekt
 
 # Magnetfeld eines stromdurchflossenen Leiters
 
